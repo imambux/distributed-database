@@ -1,9 +1,9 @@
-package fjdbc;
+package fdbs.fjdbc;
 
-import fdbs.CustomLogger;
 import fdbs.DatabaseCatalog;
 import fdbs.FederalController;
-import parser.ParseException;
+import fdbs.logging.CustomLogger;
+import fdbs.parser.ParseException;
 
 import java.sql.Statement;
 import java.util.HashMap;

@@ -1,9 +1,9 @@
-package hsfulda.de;
+package application;
 
-import fjdbc.FedConnection;
-import fjdbc.FedException;
-import fjdbc.FedResultSet;
-import fjdbc.FedStatement;
+import fdbs.fjdbc.FedConnection;
+import fdbs.fjdbc.FedException;
+import fdbs.fjdbc.FedResultSet;
+import fdbs.fjdbc.FedStatement;
 
 import java.util.Scanner;
 

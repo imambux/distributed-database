@@ -1,8 +1,8 @@
-package hsfulda.de;
+package application;
 
-import fjdbc.FedConnection;
-import fjdbc.FedException;
-import fjdbc.FedPseudoDriver;
+import fdbs.fjdbc.FedConnection;
+import fdbs.fjdbc.FedException;
+import fdbs.fjdbc.FedPseudoDriver;
 
 /**
  * Comment by: Imam Bux
@@ -12,11 +12,11 @@ public class App {
     public static void main(String[] args) throws FedException {
 
         // Username and Passwords are specific to every student, this is mine :: Imam Bux
-        String usernameTest = "VDBSA05";
-        String passwordTest = "VDBSA05";
+        String usernameTest = "VDBSAXX";
+        String passwordTest = "VDBSAXX";
 
-        String usernameValidation = "VDBSA05";
-        String passwordValidation = "VDBSA05";
+        String usernameValidation = "VDBSAXX";
+        String passwordValidation = "VDBSAXX";
 
         FedConnection fedConnection = null;
 

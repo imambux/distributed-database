@@ -56,11 +56,12 @@
 
 package fdbs;
 
-import fjdbc.FedException;
-import fjdbc.FedResultSet;
-import fjdbc.FedStatement;
-import parser.GepardParser;
-import parser.ParseException;
+import fdbs.fjdbc.FedException;
+import fdbs.fjdbc.FedResultSet;
+import fdbs.fjdbc.FedStatement;
+import fdbs.logging.CustomLogger;
+import fdbs.parser.GepardParser;
+import fdbs.parser.ParseException;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -104,7 +105,7 @@ public class FederalController {
     /* Some complex preprocess start */
 
     /*
-    * Removes tabs, extra spaces and lines for parser to understand according
+    * Removes tabs, extra spaces and lines for fdbs.parser to understand according
      * to the grammar. NOTE: We use this method because skipping tabs, spaces
      * and new lines does not work efficiently.
      */
@@ -195,7 +196,7 @@ public class FederalController {
 
     /*
      * There are so many doubles spaces, so some of them are not replaced, thus
-     * creating problem for parser, so we want to check as much as 10 times to
+     * creating problem for fdbs.parser, so we want to check as much as 10 times to
      * make sure the query is finely formatted.
      */
         int counter = 10;
@@ -225,7 +226,7 @@ public class FederalController {
     /*
      * Replaces spaces in between string constant with ___ (with replace back)
      * e.g. 'ABC XYZ' becomes 'ABC___XYZ'. It is done because I am unable to
-     * handle space between string constant parser.
+     * handle space between string constant fdbs.parser.
      */
         pattern = Pattern.compile("'([^\\s']+)([ ])+([^\\s']+)'");
         m = pattern.matcher(query);
@@ -236,7 +237,7 @@ public class FederalController {
 
         pattern = Pattern.compile("\\((.*?)[.](.*?)[ ](.*?)\\)\\)?");
     /*
-     * Replaces ( and ) because ) is showing conflict in parser and can not add
+     * Replaces ( and ) because ) is showing conflict in fdbs.parser and can not add
      * it in String constant, so workaround.
      */
         m = pattern.matcher(query);
@@ -766,7 +767,7 @@ public class FederalController {
     /* Some complex preprocess start */
 
     /*
-     * Removes tabs, extra spaces and lines for parser to understand according
+     * Removes tabs, extra spaces and lines for fdbs.parser to understand according
      * to the grammar. NOTE: We use this method because skipping tabs, spaces
      * and new lines does not work efficiently.
      */

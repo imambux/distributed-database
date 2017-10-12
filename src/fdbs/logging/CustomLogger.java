@@ -1,7 +1,7 @@
 /**
  *
  */
-package fdbs;
+package fdbs.logging;
 
 import java.io.IOException;
 import java.util.logging.FileHandler;

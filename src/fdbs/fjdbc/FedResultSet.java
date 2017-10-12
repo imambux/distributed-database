@@ -1,6 +1,6 @@
-package fjdbc;
+package fdbs.fjdbc;
 
-import fdbs.CustomLogger;
+import fdbs.logging.CustomLogger;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;

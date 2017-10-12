@@ -1,4 +1,4 @@
-package fjdbc;
+package fdbs.fjdbc;
 
 public class FedException extends Exception {
 

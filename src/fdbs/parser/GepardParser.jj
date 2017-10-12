@@ -5,13 +5,13 @@ options {
 }
 
 PARSER_BEGIN(GepardParser)
-package parser;
+package fdbs.parser;
 public class GepardParser {
 	public static void main(String args[]) {
-		GepardParser parser = new GepardParser(System.in);
+		GepardParser fdbs.parser = new GepardParser(System.in);
 		try {
-			//parser.WhereClause();
-			System.out.println(parser.ParseQuery());
+			//fdbs.parser.WhereClause();
+			System.out.println(fdbs.parser.ParseQuery());
 			System.out.println("Validated");
 		}catch(Exception e){
 		   System.out.println(e);
